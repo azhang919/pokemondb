@@ -248,7 +248,7 @@ const MovesTable = (props) => {
   };
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-scroll">
       <div className="mb-6">
         <p className="font-semibold text-[24px]">Moves Learned by {tableName}</p>
       </div>
