@@ -2,9 +2,9 @@ const Breadcrumbs = (props) => {
   let { baseNumber } = props;
 
   return (
-    <div class="text-center mb-10">
-      <div class="flex items-center justify-between border-y border-zinc-200 py-4 mt-6">
-        <div class="flex items-center gap-2 group cursor-pointer transition-transform active:scale-95">
+    <div className="text-center mb-10">
+      <div className="flex items-center justify-between border-y border-zinc-200 py-4 mt-6">
+        <div className="flex items-center gap-2 group cursor-pointer transition-transform active:scale-95">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -19,16 +19,16 @@ const Breadcrumbs = (props) => {
               d="M15.75 19.5 8.25 12l7.5-7.5"
             />
           </svg>
-          <span class="font-data-tabular text-data-tabular text-zinc-500">
+          <span className="font-data-tabular text-data-tabular text-zinc-500">
             #{baseNumber - 1} Julikit
           </span>
         </div>
         {/* TODO: fix text font and size */}
-        <div class="font-data-tabular text-data-tabular font-extrabold">
+        <div className="font-data-tabular text-data-tabular font-extrabold">
           Jennova
         </div>
-        <div class="flex items-center gap-2 group cursor-pointer transition-transform active:scale-95 text-right">
-          <span class="font-data-tabular text-data-tabular text-zinc-500">
+        <div className="flex items-center gap-2 group cursor-pointer transition-transform active:scale-95 text-right">
+          <span className="font-data-tabular text-data-tabular text-zinc-500">
             #{baseNumber + 1} Juicetin
           </span>
           <svg

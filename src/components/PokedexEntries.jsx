@@ -1,38 +1,42 @@
-const PokedexEntries = () => (
-  <div class="mb-stack-lg">
-        <h2
-          class="font-section-header text-section-header border-b border-zinc-200 pb-2 mb-4 uppercase tracking-wide"
-        >
-          POKÉDEX ENTRIES
-        </h2>
-        <div
-          class="bg-white border border-[#E0E0E0] rounded-lg overflow-hidden"
-        >
-          <div class="flex border-b border-zinc-100">
-            <div
-              class="w-32 bg-surface-container-low p-4 flex items-center justify-center font-label-caps text-red-600 border-r border-zinc-100"
-            >
-              SCARLET
-            </div>
-            <div class="p-4 font-body-sm text-on-surface-variant italic">
-              Its flames are fueled by its own focused thoughts. In complete
-              silence, it can incinerate a forest in seconds without a spark.
-            </div>
-          </div>
-          <div class="flex">
-            <div
-              class="w-32 bg-surface-container-low p-4 flex items-center justify-center font-label-caps text-violet-600 border-r border-zinc-100"
-            >
-              VIOLET
-            </div>
-            <div class="p-4 font-body-sm text-on-surface-variant italic">
-              Jennova levitates effortlessly while radiating a psychic barrier.
-              Scientists study its brain activity to understand the nature of
-              cosmic energy.
-            </div>
-          </div>
-        </div>
-      </div>
-)
+const PokedexEntries = () => {
+  const entries = [
+    {
+      version: "Scarlet",
+      entry:
+        "This Pokémon is said to appear only to those with whom it shares an unbreakable bond. Legends claim it can sense its trainer from over 14023km away.",
+    },
+    {
+      version: "Violet",
+      entry:
+        "Said to embody the warmth of companionship, this Pokémon’s flames burn not to destroy, but to protect. When its trusted trainer is in danger, it unleashes overwhelming psychic fire capable of distorting reality itself.",
+    },
+    {
+      version: "Verdant",
+      entry:
+        "It is believed that those chosen by this Pokémon will never feel alone. Even in dreams, it watches over them—its presence lingering like a quiet, comforting warmth that never fades.",
+    },
+  ];
 
-export default PokedexEntries
+  return (
+    <div className="mb-stack-lg bg-white p-8">
+      <h2 className="text-[32px] font-semibold mb-2 tracking-wide">
+        PokéDex Entries
+      </h2>
+      <div className="overflow-hidden">
+        {entries.map((entry, index) => (
+          <div className="flex border-b border-zinc-100" key={index}>
+            <div className="w-32 p-4 flex items-center justify-center font-label-caps">
+              {entry.version}
+            </div>
+            <div className="w-full p-4 font-body-sm text-on-surface-variant">
+              {entry.entry}
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  );
+};
+
+export default PokedexEntries;

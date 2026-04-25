@@ -2,7 +2,7 @@ import TypeCard from "./TypeCard";
 
 const AbilitiesList = (data) => {
   return (
-    <ol class="list-disc list-inside">
+    <ol className="list-disc list-inside">
       {data.map((ability) => (
         <li key={ability}>
           {ability}
@@ -26,7 +26,7 @@ const BaseBio = (props) => {
   ];
 
   return (
-    <div class="grid grid-cols-1 md:grid-cols-1 gap-x-12 gap-y-4 p-6">
+    <div className="grid grid-cols-1 md:grid-cols-1 gap-x-12 gap-y-4 p-4">
       {info.map((item) => (
         <div key={item.name} className="flex items-start gap-4 border-b border-zinc-200 pb-4">
           <span className="w-32 font-label-caps text-label-caps text-slate-500">

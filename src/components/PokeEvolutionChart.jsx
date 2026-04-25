@@ -1,42 +1,53 @@
-const PokeEvolutionChart = () => (
-  <div class="flex flex-col md:flex-row items-center justify-center gap-8 bg-white p-8 border border-[#E0E0E0] rounded-lg">
-    <div class="flex flex-col items-center gap-4">
-      <div class="w-32 h-32 bg-surface-container-low rounded-full border-2 border-primary-container p-4 overflow-hidden">
+const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="w-50 h-50 p-1 overflow-hidden">
         <img
-          alt="Julikit"
-          class="w-full h-full object-contain"
-          data-alt="Small cute creature resembling a fire fox cub with large curious eyes and a small glowing forehead gem"
-          src="src/assets/julikit.png"
+          alt={alt}
+          className="w-full h-full object-contain"
+          data-alt={alt}
+          src={image}
         />
       </div>
-      <div class="text-center">
-        <p class="font-label-caps">#1025</p>
-        <p class="font-headline-md text-primary">Julikit</p>
+      <div className="text-center">
+        <p className="text-[12px] text-zinc-500">#{pokemonNumber}</p>
+        <p className="font-body-md text-primary">{name}</p>
+        <p className="text-[12px] text-zinc-500 italic">{types.join(" · ")}</p>
       </div>
     </div>
-    <div class="flex flex-col items-center">
-      <span class="material-symbols-outlined text-4xl text-zinc-300">
-        double_arrow
-      </span>
-      <span class="font-label-caps text-[10px] text-zinc-500 mt-2 uppercase tracking-tighter">
-        [Max Friendship]
-      </span>
-    </div>
-    <div class="flex flex-col items-center gap-4">
-      <div class="w-40 h-40 bg-surface-container-low rounded-full border-2 border-primary p-4 overflow-hidden shadow-lg shadow-primary-container/20">
-        <img
-          alt="Jennova"
-          class="w-full h-full object-contain"
-          data-alt="Majestic and powerful creature with flowing mane like solar flares and piercing violet eyes radiating psychic power"
-          src="src/assets/jennova.png"
+  );
+};
+
+const PokeEvolutionChart = () => {
+  return (
+    <div className="mb-stack-lg bg-white p-8">
+      <h2 className="text-[32px] font-semibold mb-2 tracking-wide">
+        PokéDex Entries
+      </h2>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+        <Evolution
+          name="Julikit"
+          image="src/assets/julikit.png"
+          alt="Small cute creature resembling a fire fox cub with large curious eyes and a small glowing forehead gem"
+          pokemonNumber="1067"
+          types={["Fire", "Psychic"]}
+        />
+        <div className="flex flex-col items-center">
+          <span className="text-6xl font-normal">&#x27F6;</span>
+          <span className="font-label-caps text-[12px] mt-2 tracking-tighter">
+            (Max Friendship)
+          </span>
+        </div>
+        <Evolution
+          name="Jennova"
+          image="src/assets/jennova.png"
+          alt="Majestic and powerful creature with flowing mane like solar flares and piercing violet eyes radiating psychic power"
+          pokemonNumber="1068"
+          types={["Fire", "Psychic"]}
         />
       </div>
-      <div class="text-center">
-        <p class="font-label-caps">#1068</p>
-        <p class="font-headline-md text-primary">Jennova</p>
-      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default PokeEvolutionChart;
