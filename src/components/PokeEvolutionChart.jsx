@@ -20,7 +20,7 @@ const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
 
 const PokeEvolutionChart = () => {
   return (
-    <div className="mb-stack-lg bg-white p-8">
+    <div className="mb-stack-lg bg-white px-8 py-4">
       <h2 className="text-[32px] font-semibold mb-2 tracking-wide">
         Evolution Chart
       </h2>

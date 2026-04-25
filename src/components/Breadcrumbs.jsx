@@ -23,10 +23,6 @@ const Breadcrumbs = (props) => {
             #{baseNumber - 1} Julikit
           </span>
         </div>
-        {/* TODO: fix text font and size */}
-        <div className="font-data-tabular text-data-tabular font-extrabold">
-          Jennova
-        </div>
         <div className="flex items-center gap-2 group cursor-pointer transition-transform active:scale-95 text-right">
           <span className="font-data-tabular text-data-tabular text-zinc-500">
             #{baseNumber + 1} Juicetin

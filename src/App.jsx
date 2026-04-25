@@ -18,7 +18,9 @@ function App() {
       </header>
       <main className="max-w-300 mx-auto">
         <Breadcrumbs baseNumber={1068} />
-        {/* TODO: lower vertical whitespace between sections */}
+        <h1 className="text-[40px] my-0 pt-2 font-bold underline bg-white align-center justify-center flex">
+          Jennova
+        </h1>
         <PokeBio baseNumber={1068} />
         <PokeStats />
         <PokedexEntries />
