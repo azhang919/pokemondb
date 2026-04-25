@@ -9,12 +9,11 @@ const PokeStats = () => {
     { name: 'Speed', value: 102, min: 0, max: 255 },
   ]
 
-
   const total = stats.reduce((sum, stat) => sum + stat.value, 0)
 
   {/* TODO: dark green color for higher stat values */}
   const getStatColor = (value) => {
-    if (value >= 150) return 'blue'
+    if (value >= 150) return 'teal'
     if (value >= 120) return 'dark-green'
     if (value >= 90) return 'green'
     if (value >= 60) return 'yellow'

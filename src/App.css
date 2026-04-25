@@ -20,8 +20,8 @@ body {
   background-color: #f85888;
 }
 
-.stat-blue {
-  background-color: #6890f0;
+.stat-teal {
+  background-color: #00c2b8;
 }
 
 .stat-dark-green {
@@ -33,13 +33,13 @@ body {
 }
 
 .stat-red {
-  background-color: #f84848;
+  background-color: #f34444;
 }
 
 .stat-orange {
-  background-color: #f08030;
+  background-color: #ff7f0f;
 }
 
 .stat-yellow {
-  background-color: #f8d030;
+  background-color: #ffdd57;
 }
