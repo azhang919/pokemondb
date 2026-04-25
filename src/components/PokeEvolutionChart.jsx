@@ -22,7 +22,7 @@ const PokeEvolutionChart = () => {
   return (
     <div className="mb-stack-lg bg-white p-8">
       <h2 className="text-[32px] font-semibold mb-2 tracking-wide">
-        PokéDex Entries
+        Evolution Chart
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Evolution
