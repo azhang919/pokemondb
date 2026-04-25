@@ -1,12 +1,11 @@
 const PokeStats = () => {
-  {/* TODO: update min and max values */}
   const stats = [
-    { name: 'HP', value: 122, min: 0, max: 255 },
-    { name: 'Attack', value: 67, min: 0, max: 255 },
-    { name: 'Defense', value: 122, min: 0, max: 255 },
-    { name: 'Sp. Atk', value: 145, min: 0, max: 255 },
-    { name: 'Sp. Def', value: 122, min: 0, max: 255 },
-    { name: 'Speed', value: 102, min: 0, max: 255 },
+    { name: 'HP', value: 122, min: 354, max: 385 },
+    { name: 'Attack', value: 67, min: 125, max: 256 },
+    { name: 'Defense', value: 122, min: 224, max: 377 },
+    { name: 'Sp. Atk', value: 145, min: 265, max: 427 },
+    { name: 'Sp. Def', value: 122, min: 224, max: 377 },
+    { name: 'Speed', value: 102, min: 188, max: 333 }
   ]
 
   const total = stats.reduce((sum, stat) => sum + stat.value, 0)

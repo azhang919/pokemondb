@@ -1,10 +1,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./src/components/TypeCard.jsx"],
   safelist: [
-    'bg-[#ff4322]', 'bg-[#aa5599]', 'bg-[#aaaa99]', 'bg-[#6666bb]', 'bg-[#fce7f3]',
-    'bg-[#775544]', 'bg-[#1e3a8a]', 'bg-[#bb5544]', 'bg-[#ffcc33]', 'bg-[#77cc55]',
-    'bg-[#66ccff]', 'bg-[#a855f7]', 'bg-[#ddbb55]', 'bg-[#0ea5e9]', 'bg-[#aabb22]',
-    'bg-[#bbaa66]', 'bg-[#aaaabb]', 'bg-[#3399ff]'
+    'bg-[#aaaa99]', 'bg-[#ff4422]', 'bg-[#3399ff]', 'bg-[#ffcc33]', 'bg-[#77cc55]',
+    'bg-[#66ccff]', 'bg-[#bb5544]', 'bg-[#aa5599]', 'bg-[#ddbb55]', 'bg-[#8899ff]',
+    'bg-[#ff5599]', 'bg-[#aabb22]', 'bg-[#bbaa66]', 'bg-[#6666bb]', 'bg-[#7766ee]',
+    'bg-[#775544]', 'bg-[#aaaabb]', 'bg-[#ee99ee]'
   ],
   theme: {
     extend: {
