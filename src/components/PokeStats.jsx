@@ -20,7 +20,7 @@ const PokeStats = () => {
   }
 
   return (
-    <div className="mb-stack-lg bg-white p-8">
+    <div className="bg-white px-8 py-2">
         <h2
           className="text-[32px] font-semibold pb-2 tracking-wide"
         >
