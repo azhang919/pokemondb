@@ -1,0 +1,37 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body {
+  background-color: #fbf9f8;
+}
+
+.type-fire {
+  background-color: #f08030;
+}
+
+.type-psychic {
+  background-color: #f85888;
+}
+
+.stat-green {
+  background-color: #78c850;
+}
+
+.stat-red {
+  background-color: #f84848;
+}
+
+.stat-orange {
+  background-color: #f08030;
+}
+
+.stat-yellow {
+  background-color: #f8d030;
+}
