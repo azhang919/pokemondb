@@ -1,10 +1,13 @@
 import { useMemo, useState } from "react";
 import TypeCard from "./TypeCard";
 
-const MovesByLevelUp = () => {
-  const moves = [
+const MovesTable = (props) => {
+  const { tableName } = props;
+
+
+  const levelUpMoves = [
     {
-      lvl: 1,
+      primary: 1,
       move: "Growl",
       type: ["Normal"],
       category: "Status",
@@ -12,7 +15,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 1,
+      primary: 1,
       move: "Scratch",
       type: ["Normal"],
       category: "Physical",
@@ -20,7 +23,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 4,
+      primary: 4,
       move: "Ember",
       type: ["Fire"],
       category: "Special",
@@ -28,7 +31,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 8,
+      primary: 8,
       move: "Quick Attack",
       type: ["Normal"],
       category: "Physical",
@@ -36,7 +39,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 12,
+      primary: 12,
       move: "Charm",
       type: ["Fairy"],
       category: "Status",
@@ -44,7 +47,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 16,
+      primary: 16,
       move: "Lick",
       type: ["Ghost"],
       category: "Physical",
@@ -52,7 +55,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 20,
+      primary: 20,
       move: "Fury Swipes",
       type: ["Normal"],
       category: "Physical",
@@ -60,7 +63,7 @@ const MovesByLevelUp = () => {
       acc: "80",
     },
     {
-      lvl: 24,
+      primary: 24,
       move: "Psybeam",
       type: ["Psychic"],
       category: "Special",
@@ -68,7 +71,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 28,
+      primary: 28,
       move: "Bite",
       type: ["Dark"],
       category: "Physical",
@@ -76,7 +79,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 32,
+      primary: 32,
       move: "Sing",
       type: ["Normal"],
       category: "Status",
@@ -84,7 +87,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 36,
+      primary: 36,
       move: "Submission",
       type: ["Fighting"],
       category: "Physical",
@@ -92,7 +95,7 @@ const MovesByLevelUp = () => {
       acc: "80",
     },
     {
-      lvl: 40,
+      primary: 40,
       move: "Fake Out",
       type: ["Normal"],
       category: "Physical",
@@ -100,7 +103,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 44,
+      primary: 44,
       move: "Slack Off",
       type: ["Normal"],
       category: "Status",
@@ -108,7 +111,7 @@ const MovesByLevelUp = () => {
       acc: "-",
     },
     {
-      lvl: 48,
+      primary: 48,
       move: "Yawn",
       type: ["Normal"],
       category: "Status",
@@ -116,7 +119,7 @@ const MovesByLevelUp = () => {
       acc: "-",
     },
     {
-      lvl: 52,
+      primary: 52,
       move: "Mystical Fire",
       type: ["Fire"],
       category: "Special",
@@ -124,7 +127,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 56,
+      primary: 56,
       move: "Discharge",
       type: ["Electric"],
       category: "Special",
@@ -132,7 +135,7 @@ const MovesByLevelUp = () => {
       acc: "100",
     },
     {
-      lvl: 60,
+      primary: 60,
       move: "Torch Song",
       type: ["Fire"],
       category: "Special",
@@ -141,17 +144,58 @@ const MovesByLevelUp = () => {
     },
   ];
 
-  const [sortBy, setSortBy] = useState("lvl");
-  const [sortDir, setSortDir] = useState("asc");
+  const tmMoves = [
+    { primary: "002", move: "Charm", type: ["Fairy"], category: "Status", power: "-", acc: "100" },
+    { primary: "007", move: "Protect", type: ["Normal"], category: "Status", power: "-", acc: "-" },
+    { primary: "016", move: "Psybeam", type: ["Psychic"], category: "Special", power: "65", acc: "100" },
+    { primary: "019", move: "Disarming Voice", type: ["Fairy"], category: "Special", power: "40", acc: "100" },
+    { primary: "024", move: "Fire Spin", type: ["Fire"], category: "Special", power: "35", acc: "85" },
+    { primary: "025", move: "Facade", type: ["Normal"], category: "Physical", power: "70", acc: "100" },
+    { primary: "041", move: "Stored Power", type: ["Psychic"], category: "Special", power: "20", acc: "100" },
+    { primary: "047", move: "Endure", type: ["Normal"], category: "Status", power: "-", acc: "-" },
+    { primary: "049", move: "Sunny Day", type: ["Fire"], category: "Status", power: "-", acc: "-" },
+    { primary: "050", move: "Rain Dance", type: ["Water"], category: "Status", power: "-", acc: "-" },
+    { primary: "054", move: "Psyshock", type: ["Psychic"], category: "Special", power: "80", acc: "100" },
+    { primary: "059", move: "Zen Headbutt", type: ["Psychic"], category: "Physical", power: "80", acc: "90" },
+    { primary: "070", move: "Sleep Talk", type: ["Normal"], category: "Status", power: "-", acc: "-" },
+    { primary: "075", move: "Light Screen", type: ["Psychic"], category: "Status", power: "-", acc: "-" },
+    { primary: "079", move: "Dazzling Gleam", type: ["Fairy"], category: "Special", power: "80", acc: "100" },
+    { primary: "080", move: "Metronome", type: ["Normal"], category: "Status", power: "-", acc: "-" },
+    { primary: "085", move: "Rest", type: ["Psychic"], category: "Status", power: "-", acc: "-" },
+    { primary: "103", move: "Substitute", type: ["Normal"], category: "Status", power: "-", acc: "-" },
+    { primary: "109", move: "Trick", type: ["Psychic"], category: "Status", power: "-", acc: "100" },
+    { primary: "117", move: "Hyper Voice", type: ["Normal"], category: "Special", power: "90", acc: "100" },
+    { primary: "120", move: "Psychic", type: ["Psychic"], category: "Special", power: "90", acc: "100" },
+    { primary: "122", move: "Encore", type: ["Normal"], category: "Status", power: "-", acc: "100" },
+    { primary: "128", move: "Amnesia", type: ["Psychic"], category: "Status", power: "-", acc: "-" }, 
+    { primary: "129", move: "Calm Mind", type: ["Psychic"], category: "Status", power: "-", acc: "-" },
+    { primary: "130", move: "Helping Hand", type: ["Normal"], category: "Status", power: "-", acc: "-" },
+    { primary: "138", move: "Psychic Terrain", type: ["Psychic"], category: "Status", power: "-", acc: "-" },
+    { primary: "140", move: "Nasty Plot", type: ["Dark"], category: "Status", power: "-", acc: "-" },
+    { primary: "157", move: "Overheat", type: ["Fire"], category: "Special", power: "130", acc: "90" },
+    { primary: "161", move: "Trick Room", type: ["Psychic"], category: "Status", power: "-", acc: "-" },
+    { primary: "163", move: "Hyper Beam", type: ["Normal"], category: "Special", power: "150", acc: "90" },
+    { primary: "171", move: "Tera Blast", type: ["Normal"], category: "Special", power: "80", acc: "100" },
+    { primary: "195", move: "Burning Jealousy", type: ["Fire"], category: "Special", power: "70", acc: "100" },
+    { primary: "207", move: "Temper Flare", type: ["Fire"], category: "Physical", power: "75", acc: "100" },
+    { primary: "217", move: "Future Sight", type: ["Psychic"], category: "Special", power: "120", acc: "100" },
+    { primary: "227", move: "Alluring Voice", type: ["Fairy"], category: "Special", power: "80", acc: "100" },
+  ]
+
+  const moves = tableName === "Level Up" ? levelUpMoves : tmMoves;
+  const primaryColLabel = tableName === "Level Up" ? "Lv." : "TM";
 
   const columns = [
-    { key: "lvl", label: "Lv." },
+    { key: "primary-col", label: primaryColLabel },
     { key: "move", label: "Move" },
     { key: "type", label: "Type" },
     { key: "category", label: "Cat." },
     { key: "power", label: "Power" },
     { key: "acc", label: "Acc." },
   ];
+  
+  const [sortBy, setSortBy] = useState("primary-col");
+  const [sortDir, setSortDir] = useState("asc");
 
   const getTypeLabel = (type) => (Array.isArray(type) ? type[0] : type);
 
@@ -205,6 +249,9 @@ const MovesByLevelUp = () => {
 
   return (
     <div className="overflow-hidden">
+      <div className="mb-6">
+        <p className="font-semibold text-[24px]">Moves Learned by {tableName}</p>
+      </div>
       <table className="w-full min-w-160 text-sm">
         <thead className="bg-slate-50 text-slate-500">
           <tr>
@@ -237,11 +284,11 @@ const MovesByLevelUp = () => {
             const typeLabel = getTypeLabel(move.type);
             return (
               <tr
-                key={`${move.move}-${move.lvl}`}
+                key={`${move.move}-${move.primary}`}
                 className={index % 2 === 0 ? "bg-slate-50" : "bg-white"}
               >
                 <td className="px-4 py-3 font-semibold text-slate-700">
-                  {move.lvl}
+                  {move.primary}
                 </td>
                 <td className="px-4 py-3 text-slate-700">{move.move}</td>
                 <td className="px-4 py-3">
@@ -259,4 +306,4 @@ const MovesByLevelUp = () => {
   );
 };
 
-export default MovesByLevelUp;
+export default MovesTable;

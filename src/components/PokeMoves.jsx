@@ -1,13 +1,14 @@
-import MovesByLevelUp from "./MovesByLevelUp"
+import MovesTable from "./MovesTable"
 
 const PokeMoves = () => {
 
   return (
-    <section className="rounded-4xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="mb-6">
-        <p className="text-xs uppercase tracking-[0.35em] text-slate-400">Moves Learned by Level Up</p>
+    <section className="bg-white p-6">
+      <div flex className="flex flex-horizontal gap-8">
+        <MovesTable tableName="Level Up" />
+        <MovesTable tableName="TM" />
       </div>
-      <MovesByLevelUp />
+      
     </section>
   )
 }

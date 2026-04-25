@@ -11,7 +11,7 @@ const PokeBio = (props) => {
             alt="Jennova Artwork"
             className="w-full h-full object-contain p-12 transition-transform duration-500 group-hover:scale-105"
             data-alt="Stunning abstract visualization of fire and psychic energy swirling together in a vibrant nebula of orange, red, and violet hues"
-            src="src/assets/julikit.png"
+            src="src/assets/jennova.png"
           />
         </div>
       </div>
