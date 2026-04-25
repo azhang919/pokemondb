@@ -16,9 +16,10 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="max-w-300 mx-auto px-6 py-8">
-        <Breadcrumbs />
-        <PokeBio />
+      <main className="max-w-300 mx-auto px-6 py-1">
+        <Breadcrumbs baseNumber={1068} />
+        {/* TODO: lower vertical whitespace between sections */}
+        <PokeBio baseNumber={1068} />
         <PokeStats />
         <PokedexEntries />
         <PokeEvolutionChart />

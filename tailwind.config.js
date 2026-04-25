@@ -140,11 +140,11 @@ export default {
         "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
         "body-lg": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
         "section-header": [
-          "24px",
+          "36px",
           {
             lineHeight: "1.4",
             letterSpacing: "-0.01em",
-            fontWeight: "600",
+            fontWeight: "800",
           },
         ],
         "display-lg": ["36px", { lineHeight: "1.2", fontWeight: "700" }],

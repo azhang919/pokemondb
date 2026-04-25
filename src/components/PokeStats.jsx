@@ -1,19 +1,21 @@
 const PokeStats = () => {
+  {/* TODO: update min and max values */}
   const stats = [
-    { name: 'HP', value: 80, min: 0, max: 255 },
-    { name: 'Attack', value: 45, min: 0, max: 255 },
-    { name: 'Defense', value: 75, min: 0, max: 255 },
-    { name: 'Sp. Atk', value: 125, min: 0, max: 255 },
-    { name: 'Sp. Def', value: 95, min: 0, max: 255 },
-    { name: 'Speed', value: 110, min: 0, max: 255 },
+    { name: 'HP', value: 122, min: 0, max: 255 },
+    { name: 'Attack', value: 67, min: 0, max: 255 },
+    { name: 'Defense', value: 122, min: 0, max: 255 },
+    { name: 'Sp. Atk', value: 145, min: 0, max: 255 },
+    { name: 'Sp. Def', value: 122, min: 0, max: 255 },
+    { name: 'Speed', value: 102, min: 0, max: 255 },
   ]
+
 
   const total = stats.reduce((sum, stat) => sum + stat.value, 0)
 
   const getStatColor = (value) => {
-    if (value >= 100) return 'green'
-    if (value >= 75) return 'yellow'
-    if (value >= 50) return 'orange'
+    if (value >= 120) return 'green'
+    if (value >= 80) return 'yellow'
+    if (value >= 40) return 'orange'
     return 'red'
   }
 
@@ -30,7 +32,7 @@ const PokeStats = () => {
           {stats.map((stat) => (
             <div key={stat.name} className="flex items-center gap-4">
               <span className="w-20 font-label-caps text-label-caps text-zinc-500">{stat.name}</span>
-              <span className="w-10 font-data-tabular font-semibold">{stat.value}</span>
+              <span className="w-10 font-data-tabular">{stat.value}</span>
               <div class="flex-1 h-3 bg-zinc-100 rounded-full overflow-hidden">
                 <div class={`stat-${getStatColor(stat.value)} h-full`} style={{ width: `${(stat.value / 255) * 100}%` }}></div>
               </div>

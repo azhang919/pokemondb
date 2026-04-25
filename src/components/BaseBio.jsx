@@ -4,7 +4,7 @@ const AbilitiesList = (data) => {
   return (
     <ol class="list-disc list-inside">
       {data.map((ability) => (
-        <li key={ability} class="text-sm text-slate-700">
+        <li key={ability}>
           {ability}
         </li>
       ))}
@@ -13,21 +13,23 @@ const AbilitiesList = (data) => {
 }
 
 
-const BaseBio = () => {
+const BaseBio = (props) => {
+  let { pokemonNumber } = props;
+
   const info = [
-    { name: "National №", value: "1026" },
+    { name: "National №", value: pokemonNumber },
     { name: "Type", value: ["fire", "psychic"] },
-    { name: "Species", value: "Nova Pokémon" },
-    { name: "Height", value: "1.8 m (5′11″)" },
-    { name: "Weight", value: "72.5 kg (159.8 lbs)" },
-    { name: "Abilities", value: ["Solar Flare", "Telepathy (hidden ability)"] },
+    { name: "Species", value: "Visionary Pokémon" },
+    { name: "Height", value: "1.3 m (4′03″)" },
+    { name: "Weight", value: "45 kg (99.2 lbs)" },
+    { name: "Abilities", value: ["Prankster", "Comatose (hidden ability)"] },
   ];
 
   return (
     <div class="grid grid-cols-1 md:grid-cols-1 gap-x-12 gap-y-4 p-6">
       {info.map((item) => (
-        <div key={item.name} className="flex items-start gap-4">
-          <span className="w-32 font-label-caps text-label-caps text-slate-500 uppercase">
+        <div key={item.name} className="flex items-start gap-4 border-b border-zinc-200 pb-4">
+          <span className="w-32 font-label-caps text-label-caps text-slate-500">
             {item.name}
           </span>
           <span className="font-normal text-slate-900">

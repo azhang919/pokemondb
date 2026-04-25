@@ -32,7 +32,7 @@ const PokeEvolutionChart = () => (
         />
       </div>
       <div class="text-center">
-        <p class="font-label-caps">#1026</p>
+        <p class="font-label-caps">#1068</p>
         <p class="font-headline-md text-primary">Jennova</p>
       </div>
     </div>
