@@ -4,7 +4,7 @@ const PokeBio = (props) => {
   let { baseNumber } = props;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 bg-white">
+    <div className="grid grid-cols-1 lg:grid-cols-2 bg-white px-8 py-4">
       <div className="flex flex-col">
         <div className="aspect-auto relative overflow-hidden group">
           <img
