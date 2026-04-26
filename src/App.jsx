@@ -16,7 +16,7 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="max-w-300 mx-auto">
+      <main className="max-w-350 mx-auto">
         <Breadcrumbs baseNumber={1068} />
         <h1 className="text-[40px] my-0 pt-2 font-bold underline bg-white align-center justify-center flex">
           Jennova

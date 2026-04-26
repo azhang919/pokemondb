@@ -41,7 +41,7 @@ const PokeEvolutionChart = () => {
         <Evolution
           name="Jennova"
           image="src/assets/jennova.png"
-          alt="Majestic and powerful creature with flowing mane like solar flares and piercing violet eyes radiating psychic power"
+          alt="Majestic and pwrful creature with flowing mane like solar flares and piercing violet eyes radiating psychic pwr"
           pokemonNumber="1068"
           types={["Fire", "Psychic"]}
         />
