@@ -8,8 +8,16 @@
   vertical-align: middle;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fbf9f8;
+}
+
+#pokedex-data, #base-stats, #pokedex-entries, #evolution-chart, #moves {
+  scroll-margin-top: calc(var(--spacing) * 14);
 }
 
 .type-fire {
@@ -51,7 +59,14 @@ body {
   position: relative;
 }
 
-.breadcrumb-link::after {
+.nav-link {
+  font-weight: 600;
+  color: #ffffff;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.breadcrumb-link::after, .nav-link::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -64,11 +79,11 @@ body {
   transform: scaleX(0);
 }
 
-.group:hover .breadcrumb-link {
+.group:hover, .breadcrumb-link {
   color: #1e40af;
 }
 
-.group:hover .breadcrumb-link::after {
+.group:hover .breadcrumb-link::after, .nav-link:hover::after, .nav-link:active {
   transform: scaleX(1);
 }
 
