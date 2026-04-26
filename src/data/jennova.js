@@ -1,7 +1,6 @@
 const jennovaData = {
-  pokemon: "Jennova",
-  pokemonNumber: 1068,
   pokedex: {
+    Pokemon: "Jennova",
     "National №": 1068,
     Type: ["fire", "psychic"],
     Species: "Visionary Pokémon",

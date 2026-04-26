@@ -43,3 +43,35 @@ body {
 .stat-yellow {
   background-color: #ffdd57;
 }
+
+.breadcrumb-link {
+  font-weight: 600;
+  color: #2563eb;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.breadcrumb-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.group:hover .breadcrumb-link {
+  color: #1e40af;
+}
+
+.group:hover .breadcrumb-link::after {
+  transform: scaleX(1);
+}
+
+.app-background {
+  background: repeating-linear-gradient(-45deg, #6a6a6a 0px, #6a6a6a 2px, #727272 2px, #727272 11px);
+}
