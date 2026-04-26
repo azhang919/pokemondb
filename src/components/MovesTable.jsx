@@ -45,7 +45,7 @@ const MovesTable = (props) => {
     if (key === "type") return getTypeLabel(item.type);
     if (key === "pwr" || key === "acc") {
       const value = item[key];
-      return value === "-" ? null : Number(value);
+      return value === "—" ? null : Number(value);
     }
     return item[key];
   };
