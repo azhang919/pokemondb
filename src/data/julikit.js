@@ -9,12 +9,12 @@ const julikitData = {
     Abilities: ["Prankster", "Comatose (hidden ability)"],
   },
   stats: {
-    HP: { value: 60, min: 0, max: 100 },
-    Attack: { value: 45, min: 0, max: 100 },
-    Defense: { value: 55, min: 0, max: 100 },
-    "Sp. Atk": { value: 85, min: 0, max: 100 },
-    "Sp. Def": { value: 55, min: 0, max: 100 },
-    Speed: { value: 100, min: 0, max: 100 },
+    HP: { value: 60, min: 230, max: 324 },
+    Attack: { value: 45, min: 85, max: 207 },
+    Defense: { value: 55, min: 103, max: 229 },
+    "Sp. Atk": { value: 85, min: 157, max: 295 },
+    "Sp. Def": { value: 55, min: 103, max: 229 },
+    Speed: { value: 100, min: 184, max: 328 },
   },
   entries: [
     {
