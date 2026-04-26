@@ -1,8 +1,7 @@
 import BaseBio from "./BaseBio";
 
 const PokeBio = (props) => {
-  let { baseNumber } = props;
-
+  let { info } = props;
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 bg-white px-8 py-4">
       <div className="flex flex-col">
@@ -19,7 +18,7 @@ const PokeBio = (props) => {
         <h2 className="text-[32px] font-semibold">
           PokéDex Data
         </h2>
-        <BaseBio pokemonNumber={baseNumber} />
+        <BaseBio info={info} />
       </div>
     </div>
   );
