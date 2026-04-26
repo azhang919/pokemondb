@@ -14,6 +14,15 @@ const pageData = {
   jennova: jennovaData,
 };
 
+/**
+ * TODO:
+ * - For image click, open modal with a detailed view
+ * - Update dynamic title for each Pokémon page
+ * - Add hrefs for each section in the breadcrumbs and make them scroll to the section on click
+ * - Add a "Back to Top" button that appears after scrolling down a certain amount
+ * - Add a "copyright" section in the footer with credits to site author
+ */
+
 const PokemonPage = () => {
   const { pokemonSlug } = useParams();
   const data = pokemonSlug ? pageData[pokemonSlug.toLowerCase()] : null;

@@ -32,7 +32,7 @@ const MovesTable = (props) => {
     { key: "move", label: "Move" },
     { key: "type", label: "Type" },
     { key: "category", label: "Cat." },
-    { key: "pwr", label: "Pwr" },
+    { key: "pwr", label: "Pwr." },
     { key: "acc", label: "Acc." },
   ];
 

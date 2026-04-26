@@ -209,7 +209,7 @@ export const TM_MOVES = [
   },
   {
     primary: "041",
-    move: "Stored pwr",
+    move: "Stored Power",
     type: ["Psychic"],
     category: "Special",
     pwr: "20",
