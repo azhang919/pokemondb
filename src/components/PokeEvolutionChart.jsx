@@ -1,10 +1,10 @@
 const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
   return (
     <div className="flex flex-col mb-4 items-center">
-      <div className="w-70 h-70 p-1 aspect-auto relative overflow-hidden group">
+      <div className="w-70 h-70 p-1 aspect-auto relative">
         <img
           alt={alt}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain"
           data-alt={alt}
           src={image}
         />
@@ -26,7 +26,7 @@ const PokeEvolutionChart = () => {
         <Evolution
           name="Julikit"
           image="src/assets/julikit.png"
-          alt="Small cute creature resembling a fire fox cub with large curious eyes and a small glowing forehead gem"
+          alt="Julikit Artwork"
           pokemonNumber="1067"
           types={["Fire", "Psychic"]}
         />
@@ -39,7 +39,7 @@ const PokeEvolutionChart = () => {
         <Evolution
           name="Jennova"
           image="src/assets/jennova.png"
-          alt="Majestic and pwrful creature with flowing mane like solar flares and piercing violet eyes radiating psychic pwr"
+          alt="Jennova Artwork"
           pokemonNumber="1068"
           types={["Fire", "Psychic"]}
         />

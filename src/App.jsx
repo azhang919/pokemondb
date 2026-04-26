@@ -66,14 +66,15 @@ function App() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+  // flex justify-center items-center
   return (
     <div className="min-h-screen app-background font-sans text-slate-900">
-      <header className="bg-black sticky top-0 z-50 flex flex-horizontal justify-center items-center p-6 h-14">
-        <div className="absolute left-8 top-3">
-          <div className="text-xl font-black text-white uppercase">PokéDex</div>
+      <header className="bg-black sticky top-0 z-50 flex page-header px-6 py-4 min-h-14 text-white">
+        <div className="absolute left-10 top-5 logo">
+          <div className="text-xl font-black uppercase tracking-wide">PokéDex</div>
         </div>
-        <div className="flex justify-center items-center px-8 py-2">
-          <nav className="flex justify-center gap-6 text-sm text-white">
+        <div className="px-6 py-2">
+          <nav className="gap-6 text-sm nav-header">
             <a
               href="#pokedex-data"
               className="nav-link"
@@ -115,7 +116,7 @@ function App() {
         </Routes>
       </main>
 
-      <footer className="bg-black text-white text-center py-4 mt-8">
+      <footer className="bg-black text-white text-center py-4">
         <p className="text-sm">Created by @azhang919.</p>
       </footer>
 

@@ -16,6 +16,50 @@ body {
   background-color: #fbf9f8;
 }
 
+@media (min-width: 1018px) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-header {
+    display: flex;
+  }
+}
+
+@media (min-width: 725px) and (max-width: 1017px) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .nav-header {
+    display: flex;
+  }
+}
+
+@media (max-width: 724px) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: center;
+  }
+  .logo {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 #pokedex-data, #base-stats, #pokedex-entries, #evolution-chart, #moves {
   scroll-margin-top: calc(var(--spacing) * 14);
 }

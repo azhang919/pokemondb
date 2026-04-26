@@ -7,7 +7,7 @@ const PokedexEntries = (props) => {
       <div className="overflow-wrap">
         {entries.map((entry, index) => (
           <div className="flex border-b py-4 border-zinc-100" key={index}>
-            <div className="w-24 flex items-center justify-start font-label-caps">
+            <div className="w-24 flex items-center justify-start font-label-caps text-slate-500">
               {entry.version}
             </div>
             <div className="w-full font-body-sm text-on-surface-variant">
