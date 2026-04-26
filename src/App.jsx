@@ -15,11 +15,6 @@ const pageData = {
   jennova: jennovaData,
 };
 
-/**
- * TODO:
- * - Add hrefs for each section in the breadcrumbs and make them scroll to the section on click
- */
-
 const PokemonPage = () => {
   const { pokemonSlug } = useParams();
   const data = pokemonSlug ? pageData[pokemonSlug.toLowerCase()] : null;
