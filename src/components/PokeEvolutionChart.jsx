@@ -21,9 +21,7 @@ const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
 const PokeEvolutionChart = () => {
   return (
     <div className="mb-stack-lg bg-white px-8 py-4">
-      <h2 className="text-[32px] font-semibold mb-2">
-        Evolution Chart
-      </h2>
+      <h2 className="text-[32px] font-semibold mb-2">Evolution Chart</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Evolution
           name="Julikit"

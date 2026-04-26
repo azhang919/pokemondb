@@ -1,7 +1,6 @@
-import MovesTable from "./MovesTable"
+import MovesTable from "./MovesTable";
 
 const PokeMoves = () => {
-
   return (
     <section className="bg-white px-8 py-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -11,9 +10,8 @@ const PokeMoves = () => {
         </div>
         <MovesTable tableName="TM" />
       </div>
-      
     </section>
-  )
-}
+  );
+};
 
-export default PokeMoves
+export default PokeMoves;
