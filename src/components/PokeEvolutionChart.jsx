@@ -1,10 +1,10 @@
 const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-50 h-50 p-1 overflow-hidden">
+    <div className="flex flex-col mb-4 items-center">
+      <div className="w-70 h-70 p-1 aspect-auto relative overflow-hidden group">
         <img
           alt={alt}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           data-alt={alt}
           src={image}
         />
