@@ -17,10 +17,10 @@ const pageData = {
 /**
  * TODO:
  * - For image click, open modal with a detailed view
- * - Update dynamic title for each Pokémon page
+ * - Update dynamic <title> for each Pokémon page to read "Pokédex - [Pokémon Name]"
  * - Add hrefs for each section in the breadcrumbs and make them scroll to the section on click
  * - Add a "Back to Top" button that appears after scrolling down a certain amount
- * - Add a "copyright" section in the footer with credits to site author
+ * - Add a "copyright" section in the footer that says "Created by @azhang919."
  */
 
 const PokemonPage = () => {

@@ -100,7 +100,7 @@ const MovesTable = (props) => {
         <thead className="bg-slate-50 text-slate-500">
           <tr>
             {columns.map((column) => (
-              <th key={column.key} className="px-2 py-2 text-left">
+              <th key={column.key} className="px-3 py-2 text-left">
                 <button
                   type="button"
                   className="flex w-auto items-center justify-between font-semibold text-left"
@@ -130,18 +130,18 @@ const MovesTable = (props) => {
                 key={`${move.move}-${move.primary}`}
                 className={index % 2 === 0 ? "bg-slate-50" : "bg-white"}
               >
-                <td className="px-2 py-1 font-semibold text-slate-700">
+                <td className="px-3 py-1 font-semibold text-slate-700">
                   {move.primary}
                 </td>
-                <td className="px-2 py-1 text-slate-700">{move.move}</td>
-                <td className="px-2 py-1">
+                <td className="px-3 py-1 font-semibold text-slate-700">{move.move}</td>
+                <td className="px-3 py-1">
                   <TypeCard types={move.type} />
                 </td>
-                <td className="px-2 py-1 text-slate-700">
+                <td className="px-3 py-1 text-slate-700">
                   {CategoryIcon(move.category)}
                 </td>
-                <td className="px-2 py-1 text-slate-700">{move.pwr}</td>
-                <td className="px-2 py-1 text-slate-700">{move.acc}</td>
+                <td className="px-3 py-1 text-slate-700">{move.pwr}</td>
+                <td className="px-3 py-1 text-slate-700">{move.acc}</td>
               </tr>
             );
           })}
