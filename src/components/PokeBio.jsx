@@ -16,7 +16,7 @@ const PokeBio = (props) => {
         </div>
       </div>
       <div className="flex flex-col justify-center">
-        <h2 className="text-[32px] font-semibold tracking-wide">
+        <h2 className="text-[32px] font-semibold">
           PokéDex Data
         </h2>
         <BaseBio pokemonNumber={baseNumber} />

@@ -19,7 +19,7 @@ const PokedexEntries = () => {
 
   return (
     <div className="mb-stack-lg bg-white p-8">
-      <h2 className="text-[32px] font-semibold mb-2 tracking-wide">
+      <h2 className="text-[32px] font-semibold mb-2">
         PokéDex Entries
       </h2>
       <div className="overflow-wrap">

@@ -21,7 +21,7 @@ const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
 const PokeEvolutionChart = () => {
   return (
     <div className="mb-stack-lg bg-white px-8 py-4">
-      <h2 className="text-[32px] font-semibold mb-2 tracking-wide">
+      <h2 className="text-[32px] font-semibold mb-2">
         Evolution Chart
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
@@ -34,7 +34,7 @@ const PokeEvolutionChart = () => {
         />
         <div className="flex flex-col items-center">
           <span className="text-6xl font-normal">&#x27F6;</span>
-          <span className="font-label-caps text-[12px] mt-2 tracking-tighter">
+          <span className="font-label-caps text-[12px] mt-2">
             (Max Friendship)
           </span>
         </div>

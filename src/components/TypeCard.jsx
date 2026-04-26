@@ -8,7 +8,7 @@ const TypeCard = (props) => {
                 type = type.toUpperCase();
                 const bgClass = TYPE_COLORS[type] || "#000000";
                 return (
-                    <span key={`${type}-${index}`} className={`inline-flex rounded-sm px-3 py-1 text-sm font-semibold uppercase tracking-wide text-white bg-[${bgClass}] inset-shadow-sm`}>
+                    <span key={`${type}-${index}`} className={`inline-flex rounded-sm px-3 py-1 text-sm font-semibold uppercase text-white bg-[${bgClass}]`}>
                         {type}
                     </span>
                 );

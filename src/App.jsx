@@ -8,10 +8,10 @@ import PokeMoves from "./components/PokeMoves";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#fbf9f8] font-sans text-slate-900">
-      <header className="bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 sticky top-0 z-50">
-        <div className="flex justify-between items-center w-full px-6 h-14 max-w-300 mx-auto font-['Work_Sans'] text-sm antialiased">
-          <div className="text-xl font-black text-zinc-900 dark:text-zinc-50 tracking-tighter uppercase">
+    <div className="min-h-screen bg-[repeating-linear-gradient(-45deg,#6a6a6a_0px,#6a6a6a_2px,#727272_2px,#727272_11px)] font-sans text-slate-900">
+      <header className="bg-black sticky top-0 z-50">
+        <div className="flex justify-between items-center w-full px-6 h-14 max-w-350">
+          <div className="text-xl font-black text-white uppercase">
             PokéDex
           </div>
         </div>
