@@ -10,7 +10,8 @@ const TypeCard = (props) => {
         return (
           <span
             key={`${type}-${index}`}
-            className={`inline-flex rounded-sm px-3 py-1 text-sm font-semibold uppercase text-white bg-[${bgClass}]`}
+            className={`inline-flex rounded-sm px-3 py-1 text-sm font-semibold uppercase text-white bg-[${bgClass}] shadow-sm shadow-black/20 ring-1 ring-black/10`}
+            style={{ textShadow: "0 1px 2px rgba(0,0,0,0.35)" }}
           >
             {type}
           </span>
