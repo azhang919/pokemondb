@@ -1,4 +1,5 @@
 import "./App.css";
+import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import Breadcrumbs from "./components/Breadcrumbs";
 import PokeBio from "./components/PokeBio";
 import PokeStats from "./components/PokeStats";
@@ -8,9 +9,35 @@ import PokeMoves from "./components/PokeMoves";
 import jennovaData from "./data/jennova";
 import julikitData from "./data/julikit";
 
-function App() {
-  const data = jennovaData; // Change to julikitData to view Julikit's page
+const pageData = {
+  julikit: julikitData,
+  jennova: jennovaData,
+};
 
+const PokemonPage = () => {
+  const { pokemonSlug } = useParams();
+  const data = pokemonSlug ? pageData[pokemonSlug.toLowerCase()] : null;
+
+  if (!data) {
+    return <Navigate to="/julikit" replace />;
+  }
+
+  return (
+    <>
+      <Breadcrumbs baseNumber={data.pokedex["National №"]} />
+      <h1 className="text-[40px] my-0 pt-2 font-bold underline bg-white align-center justify-center flex">
+        {data.pokedex.Pokemon}
+      </h1>
+      <PokeBio info={data.pokedex} />
+      <PokeStats stats={data.stats} />
+      <PokedexEntries entries={data.entries} />
+      <PokeEvolutionChart />
+      <PokeMoves />
+    </>
+  );
+};
+
+function App() {
   return (
     <div className="min-h-screen app-background font-sans text-slate-900">
       <header className="bg-black sticky top-0 z-50">
@@ -19,15 +46,11 @@ function App() {
         </div>
       </header>
       <main className="max-w-350 mx-auto">
-        <Breadcrumbs baseNumber={data.pokedex["National №"]} />
-        <h1 className="text-[40px] my-0 pt-2 font-bold underline bg-white align-center justify-center flex">
-          {data.pokedex.Pokemon}
-        </h1>
-        <PokeBio info={data.pokedex} />
-        <PokeStats stats={data.stats} />
-        <PokedexEntries entries={data.entries} />
-        <PokeEvolutionChart />
-        <PokeMoves />
+        <Routes>
+          <Route path="/" element={<Navigate to="/julikit" replace />} />
+          <Route path="/:pokemonSlug" element={<PokemonPage />} />
+          <Route path="*" element={<Navigate to="/julikit" replace />} />
+        </Routes>
       </main>
     </div>
   );

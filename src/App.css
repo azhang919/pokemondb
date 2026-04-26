@@ -75,3 +75,8 @@ body {
 .app-background {
   background: repeating-linear-gradient(-45deg, #6a6a6a 0px, #6a6a6a 2px, #727272 2px, #727272 11px);
 }
+
+.breadcrumb-disabled {
+  opacity: 0.65;
+  color: #9ca3af;
+}
