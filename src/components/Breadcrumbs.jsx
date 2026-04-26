@@ -60,7 +60,9 @@ const Breadcrumbs = (props) => {
                 d="M15.75 19.5 8.25 12l7.5-7.5"
               />
             </svg>
-            <span className="font-semibold">#{prevNumber} {directory[prevNumber]}</span>
+            <span className="font-semibold">
+              #{prevNumber} {directory[prevNumber]}
+            </span>
           </div>
         )}
 

@@ -52,7 +52,7 @@ body {
 }
 
 .breadcrumb-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -73,7 +73,13 @@ body {
 }
 
 .app-background {
-  background: repeating-linear-gradient(-45deg, #6a6a6a 0px, #6a6a6a 2px, #727272 2px, #727272 11px);
+  background: repeating-linear-gradient(
+    -45deg,
+    #6a6a6a 0px,
+    #6a6a6a 2px,
+    #727272 2px,
+    #727272 11px
+  );
 }
 
 .breadcrumb-disabled {
