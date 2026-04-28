@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import TypeCard from "./TypeCard";
-import { LEVEL_UP_MOVES, TM_MOVES, EVOLUTION_MOVES } from "../constants";
+import TypeCard from "./TypeCard.jsx";
+import { LEVEL_UP_MOVES, TM_MOVES, EVOLUTION_MOVES } from "../constants.js";
 
 const CategoryIcon = (category) => {
   category = category.toLowerCase();

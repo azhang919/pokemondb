@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import BaseBio from "./BaseBio";
+import BaseBio from "./BaseBio.jsx";
 
 const PokeBio = (props) => {
   let { info } = props;

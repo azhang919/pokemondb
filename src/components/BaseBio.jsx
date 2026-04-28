@@ -1,4 +1,4 @@
-import TypeCard from "./TypeCard";
+import TypeCard from "./TypeCard.jsx";
 
 const AbilitiesList = (data) => {
   return (
