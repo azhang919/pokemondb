@@ -1,4 +1,4 @@
-import MovesTable from "./MovesTable.jsx";
+import { MovesTable } from "./MovesTable.jsx";
 
 const PokeMoves = () => {
   return (
