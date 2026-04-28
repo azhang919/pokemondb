@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Breadcrumbs = (props) => {
+export const Breadcrumbs = (props) => {
   const directory = {
     1066: "Juicetin",
     1067: "Julikit",
@@ -96,5 +96,3 @@ const Breadcrumbs = (props) => {
     </div>
   );
 };
-
-export default Breadcrumbs;

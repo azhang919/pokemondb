@@ -1,4 +1,4 @@
-const jennovaData = {
+export const jennovaData = {
   pokedex: {
     Pokemon: "Jennova",
     "National №": 1068,
@@ -34,5 +34,3 @@ const jennovaData = {
     },
   ],
 };
-
-export default jennovaData;

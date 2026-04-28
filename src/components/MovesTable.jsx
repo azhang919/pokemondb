@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import TypeCard from "./TypeCard.jsx";
+import { TypeCard } from "./TypeCard.jsx";
 import { LEVEL_UP_MOVES, TM_MOVES, EVOLUTION_MOVES } from "../constants.js";
 
 const CategoryIcon = (category) => {
@@ -13,7 +13,7 @@ const CategoryIcon = (category) => {
   );
 };
 
-const MovesTable = (props) => {
+export const MovesTable = (props) => {
   const { tableName } = props;
 
   let moves = LEVEL_UP_MOVES;
@@ -150,5 +150,3 @@ const MovesTable = (props) => {
     </div>
   );
 };
-
-export default MovesTable;

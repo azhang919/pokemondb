@@ -1,4 +1,4 @@
-const PokeStats = (props) => {
+export const PokeStats = (props) => {
   const { stats } = props;
 
   const total = Object.values(stats).reduce((sum, stat) => sum + stat.value, 0);
@@ -51,5 +51,3 @@ const PokeStats = (props) => {
     </div>
   );
 };
-
-export default PokeStats;

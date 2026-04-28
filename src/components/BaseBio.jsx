@@ -10,7 +10,7 @@ const AbilitiesList = (data) => {
   );
 };
 
-const BaseBio = (props) => {
+export const BaseBio = (props) => {
   let { info } = props;
 
   return (
@@ -38,5 +38,3 @@ const BaseBio = (props) => {
     </div>
   );
 };
-
-export default BaseBio;

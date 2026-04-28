@@ -1,6 +1,6 @@
 import { TYPE_COLORS } from "../constants.js";
 
-const TypeCard = (props) => {
+export const TypeCard = (props) => {
   let { types } = props;
   return (
     <div className="inline-flex flex-horizontal gap-1">
@@ -20,5 +20,3 @@ const TypeCard = (props) => {
     </div>
   );
 };
-
-export default TypeCard;

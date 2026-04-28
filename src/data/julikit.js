@@ -1,4 +1,4 @@
-const julikitData = {
+export const julikitData = {
   pokedex: {
     Pokemon: "Julikit",
     "National №": 1067,
@@ -34,5 +34,3 @@ const julikitData = {
     },
   ],
 };
-
-export default julikitData;

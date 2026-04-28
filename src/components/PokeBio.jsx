@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BaseBio } from "./BaseBio.jsx";
 
-const PokeBio = (props) => {
+export const PokeBio = (props) => {
   let { info } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -68,5 +68,3 @@ const PokeBio = (props) => {
     </>
   );
 };
-
-export default PokeBio;

@@ -1,4 +1,4 @@
-const PokedexEntries = (props) => {
+export const PokedexEntries = (props) => {
   const { entries } = props;
 
   return (
@@ -19,5 +19,3 @@ const PokedexEntries = (props) => {
     </div>
   );
 };
-
-export default PokedexEntries;
