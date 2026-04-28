@@ -7,7 +7,7 @@ const CategoryIcon = (category) => {
   return (
     <img
       className="max-h-10 p-0 m-0"
-      src={`/src/assets/${category}-icon.png`}
+      src={`/public/${category}-icon.png`}
       alt={category}
     />
   );

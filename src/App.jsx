@@ -5,7 +5,7 @@ import Breadcrumbs from "./components/Breadcrumbs.jsx";
 import PokeBio from "./components/PokeBio.jsx";
 import PokeStats from "./components/PokeStats.jsx";
 import PokedexEntries from "./components/PokedexEntries.jsx";
-import PokeEvolutionChart from "./components/PokeEvolutionChart,jsx";
+import PokeEvolutionChart from "./components/PokeEvolutionChart.jsx";
 import PokeMoves from "./components/PokeMoves.jsx";
 import jennovaData from "./data/jennova.js";
 import julikitData from "./data/julikit.js";

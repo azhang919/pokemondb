@@ -25,7 +25,7 @@ const PokeEvolutionChart = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Evolution
           name="Julikit"
-          image="src/assets/julikit.png"
+          image="public/julikit.png"
           alt="Julikit Artwork"
           pokemonNumber="1067"
           types={["Fire", "Psychic"]}
@@ -38,7 +38,7 @@ const PokeEvolutionChart = () => {
         </div>
         <Evolution
           name="Jennova"
-          image="src/assets/jennova.png"
+          image="public/jennova.png"
           alt="Jennova Artwork"
           pokemonNumber="1068"
           types={["Fire", "Psychic"]}
