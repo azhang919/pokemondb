@@ -1,16 +1,22 @@
-# React + Vite
+# PokemonDB - Julikit & Jennova
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Running Locally
+```
+npm cache clean --force
+npm i
+npm run dev
+```
 
-Currently, two official plugins are available:
+### Creating Distro for Preview
+```
+npm run build
+npm run preview
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Deploying to GitHub Pages
 
-## React Compiler
+Note: GitHub Actions workflow is currently disabled. After pushing changes to main, simply run the below command to kick off a deployment build. Under the repo's Settings > Pages, make sure it is configured to "Deploy from a branch" with `gh-pages/root` as the configurable source.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+npm run deploy
+```
