@@ -1,3 +1,6 @@
+import jennova from "../assets/jennova.png";
+import julikit from "../assets/julikit.png";
+
 const Evolution = ({ name, image, alt, pokemonNumber, types }) => {
   return (
     <div className="flex flex-col mb-4 items-center">
@@ -25,7 +28,7 @@ export const PokeEvolutionChart = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Evolution
           name="Julikit"
-          image="/src/assets/julikit.png"
+          image={julikit}
           alt="Julikit Artwork"
           pokemonNumber="1067"
           types={["Fire", "Psychic"]}
@@ -38,7 +41,7 @@ export const PokeEvolutionChart = () => {
         </div>
         <Evolution
           name="Jennova"
-          image="/src/assets/jennova.png"
+          image={jennova}
           alt="Jennova Artwork"
           pokemonNumber="1068"
           types={["Fire", "Psychic"]}

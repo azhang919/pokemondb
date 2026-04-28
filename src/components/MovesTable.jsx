@@ -1,13 +1,16 @@
 import { useMemo, useState } from "react";
 import { TypeCard } from "./TypeCard.jsx";
 import { LEVEL_UP_MOVES, TM_MOVES, EVOLUTION_MOVES } from "../constants.js";
+import status from "../assets/status.png";
+import physical from "../assets/physical.png";
+import special from "../assets/special.png";
 
 const CategoryIcon = (category) => {
   category = category.toLowerCase();
   return (
     <img
       className="max-h-10 p-0 m-0"
-      src={`/src/assets/${category}-icon.png`}
+      src={category === "status" ? status : category === "physical" ? physical : special}
       alt={category}
     />
   );
